@@ -1,160 +1,221 @@
 import React, { Component } from "react";
 import buildingImage from "./image/building.png";
-
+import mapImage from "./image/map.png";
+import "./style.css";
 export class ImageChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image:buildingImage,
-    }
+      image: this.props.type==="building"?buildingImage:this.props.type==="map"?mapImage:buildingImage,
+    };
   }
 
   render() {
     return (
       <>
-      <style>
-        {
-          `
+        <style>
+          {`
+          
           .DashCard-${this.props.name} {
             background-color: ${
               this.props.cardBackColor
                 ? this.props.cardBackColor
                 : "rgb(245, 245, 244)"
-            };
-            border-radius: 8px;
-            padding-top: 7px;
-            padding-bottom: 4px;
-            padding-right: 30px;
-            padding-left: 7px;
-            max-width: 300px;
+            }!important;
+            border-radius: 8px!important;
+            padding-top: 7px!important;
+            padding-bottom: 4px!important;
+            padding-right: 30px!important;
+            padding-left: 7px!important;
+            max-width: 300px!important;
           }
           .DashCardDark-${this.props.name} {
             background-color: ${
               this.props.cardBackColor
                 ? this.props.cardBackColor
                 : "rgb(32, 32, 32)"
-            };
-            border-radius: 8px;
-            padding-top: 7px;
-            padding-bottom: 4px;
-            padding-right: 30px;
-            padding-left: 7px;
-            max-width: 300px;
+            }!important;
+            border-radius: 8px!important;
+            padding-top: 7px!important;
+            padding-bottom: 4px!important;
+            padding-right: 30px!important;
+            padding-left: 7px!important;
+            max-width: 300px!important;
           }
           .ImageChartNumbersLight-${this.props.name}{
-            font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-            margin-top: 50px;
-            margin-bottom: -5px;
+            font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+            margin-top: 50px!important;
+            margin-bottom: -5px!important;
             color:  ${
-              this.props.cardSideTextColor ? this.props.cardSideTextColor : "#343a40"
-            };!important;
+              this.props.cardSideTextColor
+                ? this.props.cardSideTextColor
+                : "#343a40"
+            }!important;
         }
         .ImageChartNumbersDark-${this.props.name}{
-          font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-          margin-top: 50px;
-          margin-bottom: -5px;
+          font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+          margin-top: 50px!important;
+          margin-bottom: -5px!important;
           color:  ${
-            this.props.cardSideTextColor ? this.props.cardSideTextColor : "#e2e3e4"
-          };!important;
+            this.props.cardSideTextColor
+              ? this.props.cardSideTextColor
+              : "#e2e3e4"
+          }!important;
       }
         .imageChartHeadDark-${this.props.name}{
-          font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-            position: absolute;
-            margin-top:10px ;
-            margin-left:10px ;
-            z-index: 15;
+          font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+            position: absolute!important;
+            margin-top:10px !important;
+            margin-left:10px !important;
+            z-index: 15!important;
             color:  ${
               this.props.cardTextColor ? this.props.cardTextColor : "#343a40"
-            };!important;
+            }!important;
         }
         .imageChartHeadLight-${this.props.name}{
-          font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-            position: absolute;
-            margin-top:10px ;
-            margin-left:10px ;
-            z-index: 15;
+          font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+            position: absolute!important;
+            margin-top:10px !important;
+            margin-left:10px !important;
+            z-index: 15!important;
             color:  ${
               this.props.cardTextColor ? this.props.cardTextColor : "#343a40"
-            };!important;
+            }!important;
         }
         .imageChartText1Light-${this.props.name}{
-          font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-          position: absolute;
-          font-size:40px;
-          margin-left:60px ;
+          font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+          position: absolute!important;
           font-weight:100 !important;
-          margin-top:10px ;
-          z-index: 15;
-          color:  ${
-            this.props.cardTextColor ? this.props.cardTextColor : "#343a40"
-          };!important;
+          color:  ${this.props.cardTextColor ? this.props.cardTextColor : "#343a40"}!important;
          
       }
       .imageChartText1Dark-${this.props.name}{
-        font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-        position: absolute;
-        font-size:40px;
-        margin-left:60px ;
+        font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+        position: absolute!important;
         font-weight:100 !important;
-        margin-top:10px ;
-        z-index: 15;
         color:  ${
           this.props.cardTextColor ? this.props.cardTextColor : "#343a40"
-        };!important;
+        }!important;
       }
-      .textSize{
-        font-family: `+(this.props.fontStyle?this.props.fontStyle:"Montserrat")+`, sans-serif;
-        font-weight: 100;
-        font-size: 8px;
-       line-height: 0px;
+      .imageCardText{
+        font-family: ` +
+            (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
+            `, sans-serif!important;
+        font-weight: 100!important;
+        font-size: 8px!important;
+       line-height: 0px!important;
     }
-          `
-        }
-      </style>
-        <div className={this.props.dark ? " DashCardDark-"+this.props.name : "DashCard-"+this.props.name}>
-          <h3 
-          
+    .DashCard-${this.props.name} h3 h6 {
+      margin-bottom: 0.0rem!important;
+      line-height: 0!important;
+      margin-top: 19px!important;
+      margin-bottom: 0.5rem!important;
+  }
+    .DashCard-${this.props.name} h3{
+      font-weight: 800!important;
+      font-size: 1.15rem!important;
+    }
+    .DashCardDark-${this.props.name} h3 ,h6 {
+      margin-bottom: 0.0rem!important;
+      font-weight: 100!important;
+      line-height: 0!important;
+      margin-top: 19px!important;
+      margin-bottom: 0.5rem!important;
+    }
+    .DashCardDark-${this.props.name} h3{
+      font-weight: 800!important;
+      font-size: 1.15rem!important;
+    }
+
+    
+  .imageCardColorLine{
+    border-bottom: 3px solid ${this.props.lineColor ? this.props.lineColor : "#3cb4e7"}!important;
+    opacity: 1!important;
+    width:100%!important;   
+    z-index: 6!important;
+    position: absolute!important;
+  }
+  .imageCardColorBox {
+    background: linear-gradient(to bottom, #cab4a9 0%, ${this.props.highLightColor ? this.props.highLightColor : "#3cb4e7"} 100%) ;
+  }
+
+          `}
+        </style>
+        <div
           className={
             this.props.dark
-              ? " imageChartHeadDark-"+this.props.name
-              : " imageChartHeadLight-"+this.props.name
-          }>Occupancy <label   className={
-            this.props.dark
-              ? " imageChartText1Dark-"+this.props.name
-              : " imageChartText1Light-"+this.props.name
-          }>{this.props.value}</label></h3>
-          
+              ? "DashCardDark-" + this.props.name
+              : "DashCard-" + this.props.name
+          }
+        >
+          <h3
+            className={
+              this.props.dark
+                ? " imageChartHeadDark-" + this.props.name
+                : " imageChartHeadLight-" + this.props.name
+            }
+          >
+            {this.props.title} -{" "}
+            <label
+              className={
+                this.props.dark
+                  ? " imageChartText1Dark-" + this.props.name
+                  : " imageChartText1Light-" + this.props.name
+              }
+            >
+              {this.props.value}
+            </label>
+          </h3>
 
           <div className="rowImageChart ">
             <div className="colImageChart ">
-              <div className="Bar">
-                <div className="colorBox"></div>
+              <div className="imageCardBar">
+                <div className="imageCardColorBox"></div>
                 <div className={this.getHeightColor()}>
                   {" "}
-                  <img src={this.state.image} alt="imageForChart" id="imageForChart" className="imageBox" />
+                  <img
+                    src={this.state.image}
+                    alt="imageForChart"
+                    id="imageForChart"
+                    className="imageCardImageBox"
+                  />
                 </div>
                 <div className={this.getLineHeight()}></div>
               </div>
             </div>
-            <div  className={
-              this.props.dark
-                ? " ImageChartNumbersDark-"+this.props.name
-                : " ImageChartNumbersLight-"+this.props.name
-            }>
-              <h6 className="textSize"> </h6>
-              <h6 className="textSize"> </h6>
-              <h6 className="textSize"> </h6>
-              <h6 className="textSize">{this.indicator(100)}</h6>
-              <h6 className="textSize">{this.indicator(90)}</h6>
-              <h6 className="textSize">{this.indicator(80)}</h6>
-              <h6 className="textSize">{this.indicator(70)}</h6>
-              <h6 className="textSize">{this.indicator(60)}</h6>
-              <h6 className="textSize">{this.indicator(50)}</h6>
-              <h6 className="textSize">{this.indicator(40)}</h6>
-              <h6 className="textSize">{this.indicator(30)}</h6>
-              <h6 className="textSize">{this.indicator(20)}</h6>
-              <h6 className="textSize">{this.indicator(10)}</h6>
-              <h6 className="textSize">{this.indicator(0)}</h6>
+            <div
+              className={
+                this.props.dark
+                  ? " ImageChartNumbersDark-" + this.props.name
+                  : " ImageChartNumbersLight-" + this.props.name
+              }
+            >
+              <h6 className="imageCardText"> </h6>
+              <h6 className="imageCardText"> </h6>
+              <h6 className="imageCardText"> </h6>
+              <h6 className="imageCardText">{this.indicator(100)}</h6>
+              <h6 className="imageCardText">{this.indicator(90)}</h6>
+              <h6 className="imageCardText">{this.indicator(80)}</h6>
+              <h6 className="imageCardText">{this.indicator(70)}</h6>
+              <h6 className="imageCardText">{this.indicator(60)}</h6>
+              <h6 className="imageCardText">{this.indicator(50)}</h6>
+              <h6 className="imageCardText">{this.indicator(40)}</h6>
+              <h6 className="imageCardText">{this.indicator(30)}</h6>
+              <h6 className="imageCardText">{this.indicator(20)}</h6>
+              <h6 className="imageCardText">{this.indicator(10)}</h6>
+              <h6 className="imageCardText">{this.indicator(0)}</h6>
             </div>
           </div>
         </div>
@@ -162,60 +223,61 @@ export class ImageChart extends Component {
     );
   }
   getLineHeight() {
-    return "colorLine" + this.getHeight();
+    return "imageCardColorLine" + this.getHeight();
   }
   getHeightColor() {
-    return "colorBox colorChanger Box" + this.getHeight();
+    return (
+      "imageCardColorBox imageCardColorChanger imageCardBox" + this.getHeight()
+    );
   }
   getHeight() {
     var percentage =
       (parseInt(this.props.value) / parseInt(this.props.total)) * 100;
     if (percentage > 95) {
-      return " height100 ";
+      return " heightImageCard100 ";
     } else if (percentage > 90) {
-      return " height95";
+      return " heightImageCard95";
     } else if (percentage > 85) {
-      return " height90";
+      return " heightImageCard90";
     } else if (percentage > 80) {
-      return " height85";
+      return " heightImageCard85";
     } else if (percentage > 75) {
-      return " height80";
+      return " heightImageCard80";
     } else if (percentage > 70) {
-      return " height75";
+      return " heightImageCard75";
     } else if (percentage > 65) {
-      return " height70";
+      return " heightImageCard70";
     } else if (percentage > 60) {
-      return " height65";
+      return " heightImageCard65";
     } else if (percentage > 55) {
-      return " height60";
+      return " heightImageCard60";
     } else if (percentage > 50) {
-      return " height55";
+      return " heightImageCard55";
     } else if (percentage > 45) {
-      return " height50";
+      return " heightImageCard50";
     } else if (percentage > 40) {
-      return " height45";
+      return " heightImageCard45";
     } else if (percentage > 35) {
-      return " height40";
+      return " heightImageCard40";
     } else if (percentage > 30) {
-      return " height35";
+      return " heightImageCard35";
     } else if (percentage > 25) {
-      return " height30";
+      return " heightImageCard30";
     } else if (percentage > 20) {
-      return " height25";
+      return " heightImageCard25";
     } else if (percentage > 15) {
-      return " height20";
+      return " heightImageCard20";
     } else if (percentage > 10) {
-      return " height15";
+      return " heightImageCard15";
     } else if (percentage > 5) {
-      return " height10";
+      return " heightImageCard10";
     } else if (percentage > 0) {
-      return " height05";
+      return " heightImageCard05";
     } else {
-      return " height00";
+      return " heightImageCard00";
     }
   }
   indicator(value) {
     return (parseInt(this.props.total) * value) / 100;
   }
 }
-export default ImageChart;
