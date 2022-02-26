@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+.Bar{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    
+    /* margin: 20px; */
+}
+.test{
+    color:#1c1d1f;
+}
+.colorLine{
+    border-bottom: 3px solid #E74C3C;
+    opacity: 1;
+   
+    width:100%;   
+    z-index: 6;
+    position: absolute;
+}
+.colorBox{
+    width: 100%;
+    height: 102%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(to bottom, #cab4a9 0%, #E74C3C 100%);
+    animation: upColor 1s;
+}
+@keyframes upColor{
+	from{transform: scaleY(0.5);opacity: 0.1;}
+	to{transform: scaleY(1);opacity: 1;}
+}
+@keyframes up{
+	from{transform: scaleY(0.5);}
+	to{transform: scaleY(1);}
+}
+.colorChanger{
+    z-index: 5;
+    height: 50%;
+    bottom:0px;
+    
+    border-bottom: 3px solid rgb(221, 55, 55);
+    background: white;
+}
+
+
+.imageBox{
+    width: 100%;
+    height: 265px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    animation: up 1s;
+}.Box{
+    z-index: 2;
+    opacity: 1;
+    border-radius: 25;
+}
+.height00{
+    height: 98%;
+}
+.height05{
+    height: 94%;
+}
+.height10{
+    height: 90%;
+}
+.height15{
+    height: 87%;
+}
+.height20{
+    height: 84%;
+}
+.height25{
+    height: 80.5%;
+}
+.height30{
+    height: 77%;
+}
+.height35{
+    height: 73.5%;
+}
+.height40{
+    height: 70%;
+}
+.height45{
+    height: 66.5%;
+}
+.height50{
+    height: 63%;
+}
+.height55{
+    height: 59%;
+}
+.height60{
+    height:56%;
+}
+.height65{
+    height: 51%;
+}
+.height70{
+    height: 48%;
+}
+.height75{
+    height: 44%;
+}
+.height80{
+    height: 40%;
+}
+.height85{
+    height: 36%;
+}
+.height90{
+    height: 32%;
+}
+.height95{
+    height: 28%;
+}
+.height100{
+    height: 24%;
+}
+
+.rowImageChart {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .colImageChart {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .colImageChart,
+  .colImageChart-1,
+  .colImageChart-10,
+  .colImageChart-11,
+  .colImageChart-12,
+  .colImageChart-2,
+  .colImageChart-3,
+  .colImageChart-4,
+  .colImageChart-5,
+  .colImageChart-6,
+  .colImageChart-7,
+  .colImageChart-8,
+  .colImageChart-9,
+  .colImageChart-auto,
+  .colImageChart-lg,
+  .colImageChart-lg-1,
+  .colImageChart-lg-10,
+  .colImageChart-lg-11,
+  .colImageChart-lg-12,
+  .colImageChart-lg-2,
+  .colImageChart-lg-3,
+  .colImageChart-lg-4,
+  .colImageChart-lg-5,
+  .colImageChart-lg-6,
+  .colImageChart-lg-7,
+  .colImageChart-lg-8,
+  .colImageChart-lg-9,
+  .colImageChart-lg-auto,
+  .colImageChart-md,
+  .colImageChart-md-1,
+  .colImageChart-md-10,
+  .colImageChart-md-11,
+  .colImageChart-md-12,
+  .colImageChart-md-2,
+  .colImageChart-md-3,
+  .colImageChart-md-4,
+  .colImageChart-md-5,
+  .colImageChart-md-6,
+  .colImageChart-md-7,
+  .colImageChart-md-8,
+  .colImageChart-md-9,
+  .colImageChart-md-auto,
+  .colImageChart-sm,
+  .colImageChart-sm-1,
+  .colImageChart-sm-10,
+  .colImageChart-sm-11,
+  .colImageChart-sm-12,
+  .colImageChart-sm-2,
+  .colImageChart-sm-3,
+  .colImageChart-sm-4,
+  .colImageChart-sm-5,
+  .colImageChart-sm-6,
+  .colImageChart-sm-7,
+  .colImageChart-sm-8,
+  .colImageChart-sm-9,
+  .colImageChart-sm-auto,
+  .colImageChart-xl,
+  .colImageChart-xl-1,
+  .colImageChart-xl-10,
+  .colImageChart-xl-11,
+  .colImageChart-xl-12,
+  .colImageChart-xl-2,
+  .colImageChart-xl-3,
+  .colImageChart-xl-4,
+  .colImageChart-xl-5,
+  .colImageChart-xl-6,
+  .colImageChart-xl-7,
+  .colImageChart-xl-8,
+  .colImageChart-xl-9,
+  .colImageChart-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .mb-4,
+  .my-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  .textImageChart-center {
+    text-align: center !important;
+  }
+  .textImageChart-right {
+    text-align: right !important;
+  }
+  .pl-3,
+  .px-3 {
+    padding-left: 1rem !important;
+  }
