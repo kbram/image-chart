@@ -1,5 +1,5 @@
 # image-chart
-
+> 
 > Simply use Image Chart to plot your ratio percentages (Differently plot something)
 
 ## Features
@@ -93,7 +93,7 @@ export default App;
 ```
 
 
-#### sample - 03 (use other props [you can read more in option part])
+#### sample - 04 (use other props [you can read more in option part])
 
 ```js
 import {ImageChart} from "image-chart";
@@ -208,7 +208,7 @@ Support for Internet Explorer 7 and 8 with [excanvas](https://code.google.com/p/
 
 [MIT](LICENSE)
 
-
+>
 > Developed by Karunaaharan Bavaram
 
 ## Copyright
