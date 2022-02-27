@@ -6,10 +6,12 @@
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](http://drbl.in/ezuc)
 
+```html
 <table>
 Available Image Types <code>building</code> <code>map</code> <code>map2</code>
 Others are available soon
 </table>
+```
 
 - Highly customizable
 - Very easy to implement
