@@ -6,6 +6,11 @@
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](http://drbl.in/ezuc)
 
+```html
+Available Image Types <code>building</code> <code>map</code> <code>map2</code>
+Others are available soon
+```
+
 - Highly customizable
 - Very easy to implement
 - Resolution independent
@@ -150,7 +155,7 @@ You can pass these options to the initialize function to set a custom look and f
     </tr>
     <tr>
         <td><strong>type</strong></td>
-        <td>null</td>
+        <td>building</td>
         <td>string</td>
         <td>This is for back image type define</td>
     </tr>
