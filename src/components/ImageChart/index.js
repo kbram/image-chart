@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import buildingImage from "./image/building.png";
 import mapImage from "./image/map.png";
+import map2Image from "./image/map2.png";
 import "./style.css";
 export class ImageChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: this.props.type==="building"?buildingImage:this.props.type==="map"?mapImage:buildingImage,
+      image: this.props.type==="building"?buildingImage:this.props.type==="map"?mapImage:this.props.type==="map2"?map2Image:buildingImage,
     };
   }
 
@@ -20,7 +21,7 @@ export class ImageChart extends Component {
             background-color: ${
               this.props.cardBackColor
                 ? this.props.cardBackColor
-                : "rgb(245, 245, 244)"
+                : "#ededed"
             }!important;
             border-radius: 8px!important;
             padding-top: 7px!important;
@@ -33,7 +34,7 @@ export class ImageChart extends Component {
             background-color: ${
               this.props.cardBackColor
                 ? this.props.cardBackColor
-                : "rgb(32, 32, 32)"
+                : "#242424"
             }!important;
             border-radius: 8px!important;
             padding-top: 7px!important;
@@ -169,7 +170,7 @@ export class ImageChart extends Component {
                 : " imageChartHeadLight-" + this.props.name
             }
           >
-            {this.props.title} -{" "}
+            {this.props.title} - {" "}
             <label
               className={
                 this.props.dark

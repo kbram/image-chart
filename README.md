@@ -14,9 +14,10 @@
 - Simply compare ratio
 - No need other front-end css stuff
 - Dark, light modes available and text back colors are editable
--You can use any color theme combination
+- You can use any color theme combination
+- Now map and building template are available (other templates are under developed)
 
-## framework support
+## Framework support
 
 - React JS _(no dependencies)_
 
@@ -52,131 +53,57 @@ $ yarn add image-chart
 #### sample - 01
 
 ```js
-import HalfPieChart from "image-chart";
-import React, { Component } from "react";
+import {ImageChart} from "image-chart";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      right: [
-        {
-          value: 20,
-          displayValue: "20 $",
-          text: "Collected",
-          color: "#4cb38e",
-        },
-      ],
-      left: [
-        {
-          value: 10,
-          displayValue: "10 $",
-          text: "Pending",
-          color: "#eee36b",
-        },
-      ],
-    };
-  }
-  render() {
-    return (
-      <HalfPieChart
-        name="rentStatus"
-        right={this.state.right}
-        left={this.state.left}
-        title="Rent Status"
-      />
-    );
-  }
+function App() {
+  return (
+    <ImageChart name="chart" title="Occupants count"  total={1500} value={500} />
+  );
 }
+
 export default App;
 ```
 
 #### sample - 02 (Dark Mode)
 
 ```js
-import HalfPieChart from "image-chart";
-import React, { Component } from "react";
+import {ImageChart} from "image-chart";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      right: [
-        {
-          value: 3000,
-          displayValue: "3000 $",
-          text: "Achieved",
-          color: "#4cb38e",
-        },
-      ],
-      left: [
-        {
-          value: 10500,
-          displayValue: "10500 $",
-          text: "Pending",
-          color: "#eee36b",
-        },
-      ],
-    };
-  }
-  render() {
-    return (
-      <HalfPieChart
-        name="rentStatus2"
-        right={this.state.right}
-        left={this.state.left}
-        dark={true}
-        title="Monthly Achievement"
-      />
-    );
-  }
+function App() {
+  return (
+      <ImageChart  name="chart" title="Occupants count " dark={true} total={1500} value={500} />
+  );
 }
+
 export default App;
 ```
 
-#### sample - 03 (change bar color and add center text)
+#### sample - 03 (change image type)
 
 ```js
-import HalfPieChart from "image-chart";
-import React, { Component } from "react";
+import {ImageChart} from "image-chart";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      right: [
-        {
-          value: 3000,
-          displayValue: "3000 /=",
-          text: "Achieved",
-          color: "#f19bea",
-        },
-      ],
-      left: [
-        {
-           value: 10500,
-          displayValue: "10500 /=",
-          text: "Pending",
-          color: "#67d4ff",
-        },
-      ],
-    };
-  }
-  render() {
-    return (
-      <HalfPieChart
-        name="rentStatus4"
-        right={this.state.right}
-        left={this.state.left}
-        dark={true}
-        title="Rent Status"
-        fontStyle="Montserrat"
-        centerText={"Target"}
-        centerPostText={" /="}
-      />
-    );
-  }
+function App() {
+  return (
+    <ImageChart   name="chart" title="Occupants count " type="map" cardTextColor="#fff" total={1500} value={500} />
+  );
 }
+
+export default App;
+```
+
+
+#### sample - 03 (use other props [you can read more in option part])
+
+```js
+import {ImageChart} from "image-chart";
+
+function App() {
+  return (
+    <ImageChart cardBackColor="#f8c7ff" lineColor="#fa2eec" highLightColor="#fa2eec" cardTextColor="#fff"  name="chart" type="map"  title="Occupancy"  total={1200} value={420} />
+  );
+}
+
 export default App;
 ```
 ---
@@ -198,28 +125,22 @@ You can pass these options to the initialize function to set a custom look and f
       <td>The name is must be compulsory attribute. If you not put this multiple component can't use in same time. this is for identification of our component </td>
     </tr>
     <tr>
-      <td><strong>right</strong></td>
-      <td>null</td>
-      <td>Json Array</td>
-      <td>The name is must be compulsory attribute. This array sample is given above sample. </td>
-    </tr>
-    <tr>
-      <td><strong>left</strong></td>
-      <td>null</td>
-      <td>Json Array</td>
-      <td>The name is must be compulsory attribute. This array sample is given above sample. </td>
-    </tr>
-    <tr>
-      <td><strong>dark</strong></td>
-      <td>false</td>
-      <td>boolean</td>
-      <td>This is boolean attribute , It's true value is decided dark mode or not.</td>
-    </tr>
-    <tr>
         <td><strong>title</strong></td>
         <td>null</td>
         <td>string</td>
         <td>This is for displaying title of component</td>
+    </tr>
+     <tr>
+        <td><strong>total</strong></td>
+        <td>null</td>
+        <td>int</td>
+        <td>This attributes must be compulsory. This is for max limit number of chart</td>
+    </tr>
+    <tr>
+        <td><strong>value</strong></td>
+        <td>null</td>
+        <td>int</td>
+        <td>This attributes must be compulsory. This is for plot value of chart</td>
     </tr>
     <tr>
         <td><strong>fontStyle</strong></td>
@@ -228,81 +149,46 @@ You can pass these options to the initialize function to set a custom look and f
         <td>You can change whole component font style here</td>
     </tr>
     <tr>
-        <td><strong>centerText</strong></td>
+        <td><strong>type</strong></td>
         <td>null</td>
         <td>string</td>
-        <td>If you define this only comes center text part. If not define not comes.</td>
+        <td>This is for back image type define</td>
     </tr>
     <tr>
-        <td><strong>centerPostText</strong></td>
-        <td>null</td>
-        <td>string</td>
-        <td>This string is postfix of center text part</td>
+      <td><strong>dark</strong></td>
+      <td>false</td>
+      <td>boolean</td>
+      <td>This is boolean attribute , It's true value is decided dark mode or not.</td>
     </tr>
     <tr>
         <td><strong>cardBackColor</strong></td>
-        <td><li>Dark:<code>rgb(32, 32, 32)</code></li><li>Light:<code>rgb(245, 245, 245)</code></li></td>
+        <td><li>Dark:<code>#242424</code></li><li>Light:<code>#ededed</code></li></td>
         <td>string</td>
         <td>This is for background color of the component</td>
     </tr>
     <tr>
         <td><strong>cardTextColor</strong></td>
-        <td><li>Dark:<code>#343a40</code></li><li>Light:<code>#e9e9e9</code></li></td>
+        <td><li>Dark:<code>#343a40</code></li><li>Light:<code>#343a40</code></li></td>
         <td>string</td>
         <td>This is for text color of the component</td>
     </tr>
-</table>
-
-## CallArrays
-
-This array have value and visible text of pie chart 
-
-```js
-right: [
-    {
-      value: 3000,
-      displayValue: "3000 $",
-      text: "Achieved",
-      color: "#4cb38e",
-    }],
-left: [{
-          value: 10500,
-          displayValue: "10500 $",
-          text: "Pending",
-          color: "#eee36b",
-    }]
-```
-
-<table>
-    <tr>
-        <th>Property (Type)</th>
-        <th>Default</th>
-        <th>Type</th>
-        <th>Description</th>
+     <tr>
+        <td><strong>cardSideTextColor</strong></td>
+        <td><li>Dark:<code>#e2e3e4</code></li><li>Light:<code>#343a40</code></li></td>
+        <td>string</td>
+        <td>This is for axis text color of the component</td>
     </tr>
     <tr>
-        <td><strong>value</strong></td>
-        <td><strong>0</strong></td>
-        <td><strong>int</strong></td>
-        <td>This is compulsory attribute. This is for calculating value. </td>
+        <td><strong>imageCardColorLine</strong></td>
+        <td><code>#3cb4e7</code></td>
+        <td>string</td>
+        <td>This is for chart line color</td>
     </tr>
      <tr>
-        <td><strong>displayValue</strong></td>
-        <td><strong>null</strong></td>
-        <td><strong>int</strong></td>
-        <td>This is compulsory attribute. This is just displaying value.</td>
-    </tr>
-     <tr>
-        <td><strong>text</strong></td>
-        <td><strong>null</strong></td>
-        <td><strong>int</strong></td>
-        <td>This is compulsory attribute. This is displaying text.</td>
-    </tr>
-    <tr>
-        <td><strong>color</strong></td>
-        <td><strong>null</strong></td>
-        <td><strong>int</strong></td>
-        <td>This is changed color of the pie bar, you can customize any of the color.</td>
+        <td><strong>highLightColor</strong></td>
+        <td><code>#3cb4e7</code></td>
+        <td>string</td>
+        <td>This is for chart back highlight color</td>
     </tr>
 </table>
 
