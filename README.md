@@ -1,17 +1,15 @@
 # image-chart
-> 
+> &nbsp
 > Simply use Image Chart to plot your ratio percentages (Differently plot something)
 
 ## Features
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](http://drbl.in/ezuc)
 
-```html
-<table>
-Available Image Types <code>building</code> <code>map</code> <code>map2</code>
-Others are available soon
-</table>
-```
+> &nbsp
+>Available Image Types `building` `map` `map2` 
+>Others are available soon
+
 
 - Highly customizable
 - Very easy to implement
@@ -215,7 +213,7 @@ Support for Internet Explorer 7 and 8 with [excanvas](https://code.google.com/p/
 
 [MIT](LICENSE)
 
->
+> &nbsp
 > Developed by Karunaaharan Bavaram
 
 ## Copyright
