@@ -1,6 +1,6 @@
 {
   "name": "image-chart",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Simply use image background chart",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
