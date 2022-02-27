@@ -208,8 +208,6 @@ Native support
 - FireFox
 
 
-Support for Internet Explorer 7 and 8 with [excanvas](https://code.google.com/p/explorercanvas/wiki/Instructions) polyfill.
-
 ## License
 
 [MIT](LICENSE)
