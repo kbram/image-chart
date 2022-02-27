@@ -7,6 +7,6 @@ import { ImageChart } from "../components/ImageChart";
 const stories = storiesOf('App Test',module);
 
 stories.add('App',()=>{
-     return(<ImageChart dark={true} cardTextColor="#fff" name="chart" type="map"  title="Occupancy"  total={1200} value={520} />);
+     return(<ImageChart dark={false} cardTextColor="#fff" name="chart" type="map"  title="Occupancy"  total={1200} value={120} />);
 });
 

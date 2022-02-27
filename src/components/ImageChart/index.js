@@ -47,7 +47,7 @@ export class ImageChart extends Component {
             (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
             `, sans-serif!important;
             margin-top: 50px!important;
-            margin-bottom: -5px!important;
+            margin-bottom: -0px!important;
             color:  ${
               this.props.cardSideTextColor
                 ? this.props.cardSideTextColor
@@ -59,7 +59,7 @@ export class ImageChart extends Component {
             (this.props.fontStyle ? this.props.fontStyle : "Montserrat") +
             `, sans-serif!important;
           margin-top: 50px!important;
-          margin-bottom: -5px!important;
+          margin-bottom: -0px!important;
           color:  ${
             this.props.cardSideTextColor
               ? this.props.cardSideTextColor
@@ -140,15 +140,17 @@ export class ImageChart extends Component {
     }
 
     
-  .imageCardColorLine{
+  .imageCardColorLine-${this.props.name}{
     border-bottom: 3px solid ${this.props.lineColor ? this.props.lineColor : "#3cb4e7"}!important;
     opacity: 1!important;
     width:100%!important;   
     z-index: 6!important;
     position: absolute!important;
   }
-  .imageCardColorBox {
+  .imageCardColorBox-${this.props.name}{
+   
     background: linear-gradient(to bottom, #cab4a9 0%, ${this.props.highLightColor ? this.props.highLightColor : "#3cb4e7"} 100%) ;
+   
   }
 
           `}
@@ -182,7 +184,7 @@ export class ImageChart extends Component {
           <div className="rowImageChart ">
             <div className="colImageChart ">
               <div className="imageCardBar">
-                <div className="imageCardColorBox"></div>
+                <div className={"imageCardColorBox imageCardColorBox-"+this.props.name}></div>
                 <div className={this.getHeightColor()}>
                   {" "}
                   <img
@@ -223,11 +225,11 @@ export class ImageChart extends Component {
     );
   }
   getLineHeight() {
-    return "imageCardColorLine" + this.getHeight();
+    return "imageCardColorLine-"+this.props.name + this.getHeight();
   }
   getHeightColor() {
     return (
-      "imageCardColorBox imageCardColorChanger imageCardBox" + this.getHeight()
+      "imageCardColorBox-"+this.props.name+" imageCardColorBox imageCardColorChanger imageCardBox" + this.getHeight()
     );
   }
   getHeight() {

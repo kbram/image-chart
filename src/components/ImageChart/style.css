@@ -16,7 +16,6 @@
   border-bottom-left-radius: 5px !important;
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
-  /* background: linear-gradient(to bottom, #cab4a9 0%, #3cb4e7 100%) ; */
   animation: upColor 1s !important;
 }
 @keyframes upColor {
