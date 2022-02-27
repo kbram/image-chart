@@ -1,10 +1,10 @@
 # image-chart
 
-> Simply use Half Doughnut Chart to compare two element ratio
+> Simply use Image Chart to plot your ratio percentages (Differently plot something)
 
 ## Features
 
-[![](https://github.com/kbram/files/blob/main/half-pie.png)](http://drbl.in/ezuc)
+[![](https://github.com/kbram/files/blob/main/image-chart.png)](http://drbl.in/ezuc)
 
 - Highly customizable
 - Very easy to implement
@@ -14,6 +14,7 @@
 - Simply compare ratio
 - No need other front-end css stuff
 - Dark, light modes available and text back colors are editable
+-You can use any color theme combination
 
 ## framework support
 
