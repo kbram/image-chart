@@ -5,7 +5,7 @@
 
 ## Features
 
-[![](https://github.com/kbram/files/blob/main/image-chart.png)](http://drbl.in/ezuc)
+[![](https://github.com/kbram/files/blob/main/image-chart.png)](https://github.com/kbram/files/blob/main/image-chart.png)
 
 > 
 > 
