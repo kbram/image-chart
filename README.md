@@ -36,6 +36,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+   <li><a href="#about-project">About Project</a></li>
    <li><a href="#features">Features</a></li>
     <li><a href="#framework-support">Framework support</a></li>
     <li><a href="#built-With">Built With</a></li>
@@ -53,10 +54,13 @@
 </details>
 
 <!-- PROJECT FEATHERS -->
-## Features
+## About Project
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](https://github.com/kbram/files/blob/main/image-chart.png)
 
+  This is different kind of graph representation of UI kit. It's fully worked on react Js. In here you can simply plot graph with binary values. Now package are 3 different kind of image is using, many images are adding soon. You can simply change back, text color attributes.
+
+## Features
 > 
 > 
 >Available Image Types `building` `map` `map2` 
