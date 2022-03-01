@@ -286,13 +286,13 @@ Native support
 
 > 
 > 
-> Developed by Karunaaharan Bavaram
+> Developed by [`Karunaaharan Bavaram`](https://www.bavaram.info)
 
 
 
 ## Copyright
 
-Copyright (c) 2022 Karunaaharan Bavaram, contributors. Released under the MIT, GPL licenses
+Copyright (c) 2022 [`Karunaaharan Bavaram`](https://www.bavaram.info), contributors. Released under the MIT, GPL licenses
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
