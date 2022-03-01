@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-[![Contributors][https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge]][https://github.com/kbram/image-chart/graphs/contributors]
+[![Contributors][https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge][https://github.com/kbram/image-chart/graphs/contributors]
 
 
 <br />
