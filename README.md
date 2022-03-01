@@ -8,6 +8,8 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
+
+<!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/kbram/image-chart">
     <img src="https://github.com/kbram/files/blob/main/image-chart-icon.png" alt="Logo" width="80" height="80">
@@ -29,6 +31,28 @@
   </p>
 </div>
 
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+   <li><a href="#features">Features</a></li>
+    <li><a href="#framework-support">Framework support</a></li>
+    <li><a href="#built-With">Built With</a></li>
+    <li>
+      <a href="#get-started">Get Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usages</a></li>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#browser-support">Browser Support</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+
+<!-- PROJECT FEATHERS -->
 ## Features
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](https://github.com/kbram/files/blob/main/image-chart.png)
@@ -57,7 +81,7 @@
 
 - React JS _(no dependencies)_
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
 
