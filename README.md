@@ -1,6 +1,11 @@
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
 <div align="center">
@@ -272,3 +277,13 @@ Copyright (c) 2022 Karunaaharan Bavaram, contributors. Released under the MIT, G
 
 [contributors-shield]: https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge
 [contributors-url]: https://github.com/kbram/image-chart/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kbram/image-chart.svg?style=for-the-badge
+[forks-url]: https://github.com/kbram/image-chart/network/members
+[stars-shield]: https://img.shields.io/github/stars/kbram/image-chart.svg?style=for-the-badge
+[stars-url]: https://github.com/kbram/image-chart/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kbram/image-chart.svg?style=for-the-badge
+[issues-url]: https://github.com/kbram/image-chart/issues
+[license-shield]: https://img.shields.io/github/license/kbram/image-chart.svg?style=for-the-badge
+[license-url]: https://github.com/kbram/image-chart/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/bavaram
