@@ -1,7 +1,6 @@
 <div id="top"></div>
 
-[![Contributors][https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge][https://github.com/kbram/image-chart/graphs/contributors]
-
+[![Contributors][contributors-shield]][contributors-url]
 
 <br />
 <div align="center">
@@ -268,3 +267,8 @@ Copyright (c) 2022 Karunaaharan Bavaram, contributors. Released under the MIT, G
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge
+[contributors-url]: https://github.com/kbram/image-chart/graphs/contributors
