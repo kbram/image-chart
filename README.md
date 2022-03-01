@@ -1,7 +1,43 @@
-# image-chart
-> 
-> 
-> Simply use Image Chart to plot your ratio percentages (Differently plot something)
+<div id="top"></div>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
+<!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/kbram/image-chart">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">image-chart</h3>
+
+  <p align="center">
+    Simply use Image Chart to plot your ratio percentages (Differently plot something)
+    <br />
+    <a href="https://github.com/kbram/image-chart"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/kbram/image-chart">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</div>
 
 ## Features
 
@@ -24,9 +60,25 @@
 - You can use any color theme combination
 - Now map and building template are available (other templates are under developed)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 ## Framework support
 
 - React JS _(no dependencies)_
+
+
+
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+
+* [React.js](https://reactjs.org/)
+* [JavaScript](https://www.javascript.com/)
+* [css]()
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Get started
 
@@ -52,7 +104,7 @@ Using yarn:
 ```bash
 $ yarn add image-chart
 ```
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ---
 
 ## Usage
@@ -113,6 +165,8 @@ function App() {
 
 export default App;
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ---
 ## Options
 
@@ -199,6 +253,8 @@ You can pass these options to the initialize function to set a custom look and f
     </tr>
 </table>
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Browser Support
 
 Native support
@@ -207,6 +263,7 @@ Native support
 - Safari
 - FireFox
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## License
 
@@ -216,6 +273,10 @@ Native support
 > 
 > Developed by Karunaaharan Bavaram
 
+
+
 ## Copyright
 
 Copyright (c) 2022 Karunaaharan Bavaram, contributors. Released under the MIT, GPL licenses
+
+<p align="right">(<a href="#top">back to top</a>)</p>
