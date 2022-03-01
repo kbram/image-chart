@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/kbram/image-chart">
-    <img src="https://github.com/kbram/files/blob/main/image-chart-icon.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/kbram/files/blob/main/image-chart-icon.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">image-chart</h3>
@@ -60,6 +60,8 @@
 
   This is different kind of graph representation of UI kit. It's fully worked on react Js. In here you can simply plot graph with binary values. Now package are 3 different kind of image is using, many images are adding soon. You can simply change back, text color attributes.
 
+  <p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Features
 > 
 > 
@@ -88,9 +90,6 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 
 * [React.js](https://reactjs.org/)
 * [JavaScript](https://www.javascript.com/)
