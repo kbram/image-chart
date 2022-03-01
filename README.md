@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/kbram/image-chart">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/kbram/files/blob/main/image-chart-icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">image-chart</h3>
@@ -53,7 +53,7 @@
 
 
 
-### Built With
+## Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
@@ -89,6 +89,7 @@ Using yarn:
 $ yarn add image-chart
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ---
 
 ## Usage
