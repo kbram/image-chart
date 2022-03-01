@@ -1,5 +1,7 @@
 <div id="top"></div>
 
+[![Contributors][https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge]][https://github.com/kbram/image-chart/graphs/contributors]
+
 
 <br />
 <div align="center">
@@ -17,9 +19,9 @@
     <br />
     <a href="https://github.com/kbram/image-chart">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/kbram/image-chart/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/kbram/image-chart/issues">Request Feature</a>
   </p>
 </div>
 
