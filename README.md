@@ -58,7 +58,7 @@
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](https://github.com/kbram/files/blob/main/image-chart.png)
 
-This is different kind of graph representation of UI kit. It's fully worked on react Js. In here you can simply plot graph with binary values. Now package are 3 different kind of image is using, many images are adding soon. You can simply change back, text color attributes.
+This is different kind of graph representation of UI kit. It's fully worked on react and Next Js. In here you can simply plot graph with binary values. Now package are 3 different kind of image is using, many images are adding soon. You can simply change back, text color attributes.
 
   <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,7 +82,8 @@ This is different kind of graph representation of UI kit. It's fully worked on r
 
 ## Framework support
 
-- React JS _(no dependencies)_
+- React JS (v17, v18, v19+)
+- Next.js (v13+ with App Router, requires `"use client";` directive)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
