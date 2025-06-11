@@ -236,6 +236,57 @@ export default App;
 
 ---
 
+## Next.js Usage
+
+To use `image-chart` in a Next.js project (using the App Router), you need to ensure the component is treated as a Client Component, as it's a React Class Component.
+
+1.  **Install the package:**
+
+    ```bash
+    npm install image-chart
+    # or
+    yarn add image-chart
+    ```
+
+2.  **Import and use the component:**
+    In your Next.js page or component file (e.g., `app/your-page/page.tsx`), add the `"use client";` directive at the top of the file.
+
+    ```jsx
+    "use client"; // Add this at the top
+
+    import { ImageChart } from "image-chart";
+    import myCustomImage from "../path/to/your/image.png"; // If using type="my"
+
+    export default function MyPage() {
+      return (
+        <div>
+          <ImageChart
+            name="nextJsChart"
+            title="Chart in Next.js"
+            type="my"
+            image={myCustomImage}
+            total={100}
+            value={60}
+          />
+        </div>
+      );
+    }
+    ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+
+## TypeScript Support
+
+`image-chart` version `0.1.4` and later includes built-in type definitions (`index.d.ts`). This means you get out-of-the-box TypeScript support, including type checking and autocompletion for props, when using the component in your TypeScript projects.
+
+No additional `@types/image-chart` package or manual declaration files are needed.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+
 ## Options
 
 You can pass these options to the initialize function to set a custom look and feel for the plugin.
