@@ -16,9 +16,9 @@
   border-bottom-left-radius: 5px !important;
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
-  animation: upColor 1s !important;
+  animation: revealAnimation 1s !important;
 }
-@keyframes upColor {
+@keyframes revealAnimation {
   from {
     transform: scaleY(0.5);
     opacity: 0.1;
@@ -26,14 +26,6 @@
   to {
     transform: scaleY(1);
     opacity: 1;
-  }
-}
-@keyframes up {
-  from {
-    transform: scaleY(0.5);
-  }
-  to {
-    transform: scaleY(1);
   }
 }
 
@@ -52,7 +44,7 @@
   border-bottom-left-radius: 5px !important;
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
-  animation: up 1s !important;
+  animation: revealAnimation 1s !important;
 }
 .imageCardBox {
   z-index: 2 !important;

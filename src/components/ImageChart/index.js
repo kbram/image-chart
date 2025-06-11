@@ -2,12 +2,24 @@ import React, { Component } from "react";
 import buildingImage from "./image/building.png";
 import mapImage from "./image/map.png";
 import map2Image from "./image/map2.png";
+import mountainImage from "./image/mountain.png"; // Added mountain image import
 import "./style.css";
 export class ImageChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: this.props.type==="building"?buildingImage:this.props.type==="map"?mapImage:this.props.type==="map2"?map2Image:buildingImage,
+      image:
+        this.props.type === "my"
+          ? this.props.image // If type is "my", use the image prop
+          : this.props.type === "building" // Else, use the predefined images based on type
+          ? buildingImage
+          : this.props.type === "map"
+          ? mapImage
+          : this.props.type === "map2"
+          ? map2Image
+          : this.props.type === "mountain" // Added mountain type
+          ? mountainImage
+          : buildingImage, // Default image if type is not "my" and not one of the predefined
     };
   }
 
@@ -19,9 +31,7 @@ export class ImageChart extends Component {
           
           .DashCard-${this.props.name} {
             background-color: ${
-              this.props.cardBackColor
-                ? this.props.cardBackColor
-                : "#ededed"
+              this.props.cardBackColor ? this.props.cardBackColor : "#ededed"
             }!important;
             border-radius: 8px!important;
             padding-top: 7px!important;
@@ -32,9 +42,7 @@ export class ImageChart extends Component {
           }
           .DashCardDark-${this.props.name} {
             background-color: ${
-              this.props.cardBackColor
-                ? this.props.cardBackColor
-                : "#242424"
+              this.props.cardBackColor ? this.props.cardBackColor : "#242424"
             }!important;
             border-radius: 8px!important;
             padding-top: 7px!important;
@@ -97,7 +105,9 @@ export class ImageChart extends Component {
             `, sans-serif!important;
           position: absolute!important;
           font-weight:100 !important;
-          color:  ${this.props.cardTextColor ? this.props.cardTextColor : "#343a40"}!important;
+          color:  ${
+            this.props.cardTextColor ? this.props.cardTextColor : "#343a40"
+          }!important;
          
       }
       .imageChartText1Dark-${this.props.name}{
@@ -142,7 +152,9 @@ export class ImageChart extends Component {
 
     
   .imageCardColorLine-${this.props.name}{
-    border-bottom: 3px solid ${this.props.lineColor ? this.props.lineColor : "#3cb4e7"}!important;
+    border-bottom: 3px solid ${
+      this.props.lineColor ? this.props.lineColor : "#3cb4e7"
+    }!important;
     opacity: 1!important;
     width:100%!important;   
     z-index: 6!important;
@@ -150,7 +162,9 @@ export class ImageChart extends Component {
   }
   .imageCardColorBox-${this.props.name}{
    
-    background: linear-gradient(to bottom, #cab4a9 0%, ${this.props.highLightColor ? this.props.highLightColor : "#3cb4e7"} 100%) ;
+    background: linear-gradient(to bottom, #cab4a9 0%, ${
+      this.props.highLightColor ? this.props.highLightColor : "#3cb4e7"
+    } 100%) ;
    
   }
 
@@ -170,7 +184,7 @@ export class ImageChart extends Component {
                 : " imageChartHeadLight-" + this.props.name
             }
           >
-            {this.props.title} - {" "}
+            {this.props.title} -{" "}
             <label
               className={
                 this.props.dark
@@ -185,7 +199,11 @@ export class ImageChart extends Component {
           <div className="rowImageChart ">
             <div className="colImageChart ">
               <div className="imageCardBar">
-                <div className={"imageCardColorBox imageCardColorBox-"+this.props.name}></div>
+                <div
+                  className={
+                    "imageCardColorBox imageCardColorBox-" + this.props.name
+                  }
+                ></div>
                 <div className={this.getHeightColor()}>
                   {" "}
                   <img
@@ -226,15 +244,18 @@ export class ImageChart extends Component {
     );
   }
   getLineHeight() {
-    return "imageCardColorLine-"+this.props.name + this.getHeight();
+    return "imageCardColorLine-" + this.props.name + this.getHeight();
   }
   getHeightColor() {
     return (
-      "imageCardColorBox-"+this.props.name+" imageCardColorBox imageCardColorChanger imageCardBox" + this.getHeight()
+      "imageCardColorBox-" +
+      this.props.name +
+      " imageCardColorBox imageCardColorChanger imageCardBox" +
+      this.getHeight()
     );
   }
   getHeight() {
-    var percentage =
+    const percentage =
       (parseInt(this.props.value) / parseInt(this.props.total)) * 100;
     if (percentage > 95) {
       return " heightImageCard100 ";

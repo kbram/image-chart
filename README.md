@@ -31,7 +31,6 @@
   </p>
 </div>
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -54,20 +53,19 @@
 </details>
 
 <!-- PROJECT FEATHERS -->
+
 ## About Project
 
 [![](https://github.com/kbram/files/blob/main/image-chart.png)](https://github.com/kbram/files/blob/main/image-chart.png)
 
-  This is different kind of graph representation of UI kit. It's fully worked on react Js. In here you can simply plot graph with binary values. Now package are 3 different kind of image is using, many images are adding soon. You can simply change back, text color attributes.
+This is different kind of graph representation of UI kit. It's fully worked on react Js. In here you can simply plot graph with binary values. Now package are 3 different kind of image is using, many images are adding soon. You can simply change back, text color attributes.
 
   <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Features
-> 
-> 
->Available Image Types `building` `map` `map2` 
->Others are available soon
 
+> Available Image Types `building` `map` `map2` `mountain`
+> Others are available soon
 
 - Highly customizable
 - Very easy to implement
@@ -82,7 +80,6 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 ## Framework support
 
 - React JS _(no dependencies)_
@@ -91,9 +88,9 @@
 
 ## Built With
 
-* [React.js](https://reactjs.org/)
-* [JavaScript](https://www.javascript.com/)
-* [css]()
+- [React.js](https://reactjs.org/)
+- [JavaScript](https://www.javascript.com/)
+- [css]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -121,6 +118,7 @@ Using yarn:
 ```bash
 $ yarn add image-chart
 ```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
@@ -130,11 +128,11 @@ $ yarn add image-chart
 #### sample - 01
 
 ```js
-import {ImageChart} from "image-chart";
+import { ImageChart } from "image-chart";
 
 function App() {
   return (
-    <ImageChart name="chart" title="Occupants count"  total={1500} value={500} />
+    <ImageChart name="chart" title="Occupants count" total={1500} value={500} />
   );
 }
 
@@ -144,11 +142,17 @@ export default App;
 #### sample - 02 (Dark Mode)
 
 ```js
-import {ImageChart} from "image-chart";
+import { ImageChart } from "image-chart";
 
 function App() {
   return (
-      <ImageChart  name="chart" title="Occupants count " dark={true} total={1500} value={500} />
+    <ImageChart
+      name="chart"
+      title="Occupants count "
+      dark={true}
+      total={1500}
+      value={500}
+    />
   );
 }
 
@@ -158,34 +162,80 @@ export default App;
 #### sample - 03 (change image type)
 
 ```js
-import {ImageChart} from "image-chart";
+import { ImageChart } from "image-chart";
 
 function App() {
   return (
-    <ImageChart   name="chart" title="Occupants count " type="map" cardTextColor="#fff" total={1500} value={500} />
+    <ImageChart
+      name="chart"
+      title="Occupants count "
+      type="map"
+      cardTextColor="#fff"
+      total={1500}
+      value={500}
+    />
   );
 }
 
 export default App;
 ```
-
 
 #### sample - 04 (use other props [you can read more in option part])
 
 ```js
-import {ImageChart} from "image-chart";
+import { ImageChart } from "image-chart";
 
 function App() {
   return (
-    <ImageChart cardBackColor="#f8c7ff" lineColor="#fa2eec" highLightColor="#fa2eec" cardTextColor="#fff"  name="chart" type="map"  title="Occupancy"  total={1200} value={420} />
+    <ImageChart
+      cardBackColor="#f8c7ff"
+      lineColor="#fa2eec"
+      highLightColor="#fa2eec"
+      cardTextColor="#fff"
+      name="chart"
+      type="map"
+      title="Occupancy"
+      total={1200}
+      value={420}
+    />
   );
 }
 
 export default App;
 ```
+
+#### sample - 05 (Using your own image)
+
+To use your own custom image, set the `type` prop to `"my"` and pass the image source to the `image` prop. You can import images directly into your component or pass a URL.
+
+For sample images that you can use, or to see the structure of the default images, you can check the image directory in the repository: [https://github.com/kbram/image-chart/tree/master/src/components/ImageChart/image](https://github.com/kbram/image-chart/tree/master/src/components/ImageChart/image)
+
+```js
+import { ImageChart } from "image-chart";
+import myCustomImage from "./path/to/your/image.png"; // Example: import your image
+
+function App() {
+  return (
+    <ImageChart
+      name="chart"
+      title="Custom Image Chart"
+      type="my"
+      image={myCustomImage} // Pass the imported image or a URL string
+      total={1000}
+      value={750}
+      dark={false}
+      cardTextColor="#333"
+    />
+  );
+}
+
+export default App;
+```
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
+
 ## Options
 
 You can pass these options to the initialize function to set a custom look and feel for the plugin.
@@ -231,7 +281,13 @@ You can pass these options to the initialize function to set a custom look and f
         <td><strong>type</strong></td>
         <td>building</td>
         <td>string</td>
-        <td>This is for back image type define</td>
+        <td>This is for back image type define. Available types are `building`, `map`, `map2`, `mountain`. Set to `my` to use a custom image via the `image` prop.</td>
+    </tr>
+    <tr>
+      <td><strong>image</strong></td>
+      <td>null</td>
+      <td>string / object</td>
+      <td>Used when `type` is set to `my`. Pass the imported image object or a URL string for your custom image.</td>
     </tr>
     <tr>
       <td><strong>dark</strong></td>
@@ -287,20 +343,13 @@ Native support
 
 [MIT](LICENSE)
 
-> 
-> 
 > Developed by [`Karunaaharan Bavaram`](https://www.bavaram.info)
-
-
 
 ## Copyright
 
 Copyright (c) 2022 [`Karunaaharan Bavaram`](https://www.bavaram.info), contributors. Released under the MIT, GPL licenses
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 
 [contributors-shield]: https://img.shields.io/github/contributors/kbram/image-chart.svg?style=for-the-badge
 [contributors-url]: https://github.com/kbram/image-chart/graphs/contributors
